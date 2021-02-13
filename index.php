@@ -11,8 +11,8 @@
                 <img src="images/1.jpeg">
                 <div class="container">
                     <h2>CEO</h2>
-                    <p>CEO_NAME</p>
-                    <p>CEO_EMAIL</p>
+                    <p>Bob</p>
+                    <p>Bob@gmail.com</p>
                 </div>
             </div>
         </div>
@@ -21,9 +21,9 @@
                 <div class="card">
                     <img src="images/2.jpeg">
                     <div class="container">
-                        <h2>CEO</h2>
-                        <p>CEO_NAME</p>
-                        <p>CEO_EMAIL</p>
+                        <h2>CBDO</h2>
+                        <p>Rob</p>
+                        <p>Rob@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -32,9 +32,9 @@
                     <div class="card">
                         <img src="images/3.jpeg">
                         <div class="container">
-                            <h2>CEO</h2>
-                            <p>CEO_NAME</p>
-                            <p>CEO_EMAIL</p>
+                            <h2>COO</h2>
+                            <p>Wen</p>
+                            <p>Wen@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -43,9 +43,9 @@
                         <div class="card">
                             <img src="images/4.jpeg">
                             <div class="container">
-                                <h2>CEO</h2>
-                                <p>CEO_NAME</p>
-                                <p>CEO_EMAIL</p>
+                                <h2>CMO</h2>
+                                <p>Ren</p>
+                                <p>REN@gmail.com</p>
                             </div>
                         </div>
                     </div>
