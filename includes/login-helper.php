@@ -19,23 +19,25 @@ if(isset($_POST['login-submit'])){
 }else{
     mysqli_stmt_bind_param($stmt,"ss",$uname,$uname);
     mysqli_stmt_execute($stmt);
-    $result= sqli_stmt_get_result($stmt);
-    $data = sqli_fetch_assoc($result);
+    $result= mysqli_stmt_get_result($stmt);
+    $data = mysqli_fetch_assoc($result);
 
     if(empty($data)){
-        header("Location: ../login.php?error=UserDNE.");
+        header("Location: ../login.php?error=UserDNE");
         exit();
     }else{
-        $pass_check = password_verify($passw,$data['password']);
+        $pass_check = password_verify($passw, $data['password']);
         if($pass_check == true){
             session_start();
-            $_SESSION['uid']= $data['uid']; 
-            $_SESSION['fname']=$data['fname'];
-            $_SESSION['uname']=$data['uname'];
-
-            echo "<h1>Success!</h1><p>$uname</p>";
+            $_SESSION['uid'] = $data['uid']; 
+            $_SESSION['fname'] = $data['fname'];
+            $_SESSION['uname'] = $data['uname'];
+            
+            header("Location: ../profile.php?success=login");
+            exit();
         }else{
             header("Location: ../login.php?error=WrongPass");
+            exit();
         }
     }
 
