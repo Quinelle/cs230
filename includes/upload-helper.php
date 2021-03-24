@@ -5,8 +5,8 @@ session_start();
 define('KB', 1024);
 define('MB', 1048576);
 
-if(isset($POST['prof-submit'])){
-$umane = $_SESSION['uname'];
+if(isset($_POST['prof-submit'])){
+$uname = $_SESSION['uname'];
 $file = $_FILES['prof-image'];
 $file_name = $file['name'];
 $file_tmp_name = $file['tmp_name'];
@@ -32,7 +32,7 @@ else{
 
     $destination = '../profiles/'.$new_name;
 
-    $sql = "UPDATE profiles SET profpic = '$destination' WHERE uname='$uname";
+    $sql = "UPDATE profiles SET profpic = '$destination' WHERE uname='$uname'";
 
     mysqli_query($conn, $sql);
 
@@ -40,8 +40,9 @@ else{
     header("Location: ../profile.php?success=UploadWin");
     exit();
 }
+}
+
 else {
     header("Location: ../profile.php");
     exit();
-}
 }
